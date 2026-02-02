@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="flame32" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#fea0ff"/>
+      <stop offset="100%" stop-color="#fff0ff"/>
+    </linearGradient>
+    <linearGradient id="core32" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#d8b4fe"/>
+    </linearGradient>
+    <filter id="softedge32" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+  <g transform="translate(-4, 4) rotate(-135, 16, 16)">
+    <path d="M16 0 C21.3 9.3, 28 14.7, 28 24 C28 32, 22.7 37.3, 16 37.3 C9.3 37.3, 4 32, 4 24 C4 14.7, 10.7 9.3, 16 0 Z" fill="url(#flame32)"/>
+    <path d="M16 9.3 C19.3 16, 23.3 18.7, 23.3 25.3 C23.3 30.7, 20 34.7, 16 34.7 C12 34.7, 8.7 30.7, 8.7 25.3 C8.7 18.7, 12.7 16, 16 9.3 Z" fill="url(#core32)" filter="url(#softedge32)"/>
+  </g>
+</svg>

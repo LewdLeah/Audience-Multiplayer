@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "Audience Multiplayer",
+  "version": "1.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWPgWABvncAu+Hc5ARDPsBauB0lD6vdzhJj+/MaYez1Eyc2sODR2KisNchYYQjB78IzI6R8plp5uORYtdmw3sug+qRsfMHQb0f45NzthPw8ptEh1f9bhI2YRaUKUshEXc0HxpRyye46mF3ueZzjlQeQ9Irm6Dpm6E3WKI9EsJabba3e3W05zP1VbCo/vdiO7fFPVKQwx+JxH1+FN5CAa+1wQbTYkYGXbHfJhI+WHZ175wf4q61pdpbk2SdHNieUczYWTO4Zf5KgEVSmzhiG73TFLu7UwtMKFdzPevIUIXHzLyk2omUedWDkmGTbiMm5mZ5cUGLzGuUAGXUkzvKqRXQIDAQAB",
+  "description": "Livestream chat integration for AI Dungeon multiplayer adventures",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://play.aidungeon.com/*",
+    "https://api.aidungeon.com/*",
+    "wss://api.aidungeon.com/*",
+    "https://beta.aidungeon.com/*",
+    "https://api-beta.aidungeon.com/*",
+    "wss://api-beta.aidungeon.com/*",
+    "https://alpha.aidungeon.com/*",
+    "https://api-alpha.aidungeon.com/*",
+    "wss://api-alpha.aidungeon.com/*",
+    "https://openrouter.ai/*",
+    "https://id.twitch.tv/*",
+    "https://api.twitch.tv/*",
+    "wss://irc-ws.chat.twitch.tv/*",
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://play.aidungeon.com/*",
+        "https://beta.aidungeon.com/*",
+        "https://alpha.aidungeon.com/*"
+      ],
+      "js": ["content/index.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.youtube.com/live_chat*"],
+      "js": ["content/youtube.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content/inject.js"],
+      "matches": [
+        "https://play.aidungeon.com/*",
+        "https://beta.aidungeon.com/*",
+        "https://alpha.aidungeon.com/*"
+      ]
+    }
+  ]
+}

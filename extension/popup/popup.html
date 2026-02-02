@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <h1><a href="https://github.com/LewdLeah/Audience-Multiplayer" target="_blank">Audience Multiplayer</a></h1>
+        <span class="made-by">by <a href="https://play.aidungeon.com/profile/LewdLeah" target="_blank">LewdLeah</a></span>
+      </div>
+      <div class="header-controls">
+        <button id="pop-out" class="btn-icon" title="Open in new window">⧉</button>
+        <div class="status-row">
+          <span id="aid-status" class="status-dot" title="AI Dungeon"></span>
+          <span id="twitch-status" class="status-dot" title="Twitch"></span>
+          <span id="youtube-status" class="status-dot" title="YouTube" style="display:none"></span>
+        </div>
+      </div>
+    </header>
+    <section class="phase-section glass-panel">
+      <div class="phase-label">Phase</div>
+      <div id="phase" class="phase-value">idle</div>
+      <div id="timer-display" class="timer-display"></div>
+      <div id="submission-count" class="submission-count"></div>
+    </section>
+    <section class="controls">
+      <button id="start-vote" class="btn btn-primary">Start Vote</button>
+      <button id="end-vote" class="btn btn-secondary" disabled>End Vote</button>
+      <button id="pause-btn" class="btn btn-pause" title="Pause auto-repeat">⏸</button>
+    </section>
+    <details class="settings glass-panel">
+      <summary>Settings</summary>
+      <div class="settings-content">
+        <div class="setting-group">
+          <label>Twitch Channel</label>
+          <input type="text" id="twitch-channel" placeholder="your_channel">
+        </div>
+        <div class="setting-group">
+          <label>Twitch Account</label>
+          <div class="twitch-auth-row">
+            <button id="twitch-auth" class="btn btn-twitch">Connect Twitch</button>
+            <span id="twitch-auth-status"></span>
+          </div>
+        </div>
+        <div class="setting-group">
+          <label>YouTube Live URL <span class="optional-label">(optional)</span></label>
+          <input type="text" id="youtube-url" placeholder="https://www.youtube.com/live/...">
+          <small class="hint">Paste a YouTube livestream URL to read chat from there too</small>
+          <div id="youtube-error" class="error-banner" style="display:none">
+            <strong>YouTube chat unavailable</strong><br>
+            YouTube may have changed their page structure. Check <a href="https://github.com/LewdLeah/Audience-Multiplayer/issues" target="_blank">GitHub Issues</a> for updates.
+          </div>
+        </div>
+        <div class="setting-group">
+          <label>Your Character Name</label>
+          <input type="text" id="player-character-name" placeholder="Defaults to channel name">
+          <small class="hint">Your character's name in the story</small>
+        </div>
+        <div class="setting-group">
+          <label>Party Member Name</label>
+          <input type="text" id="party-member-name" placeholder="Elara">
+          <small class="hint">Character name for Twitch chat actions</small>
+        </div>
+        <div class="setting-group">
+          <label>OpenRouter API Key</label>
+          <div class="api-key-row">
+            <input type="password" id="openrouter-key" placeholder="sk-or-...">
+            <span id="api-key-status"></span>
+            <button id="forget-api-key" class="btn-forget" style="display:none">Forget</button>
+          </div>
+          <small class="hint">Without key, votes pick a winner instead of AI blending</small>
+        </div>
+        <div class="setting-group">
+          <label>Model</label>
+          <select id="model">
+            <option value="" disabled>Loading models...</option>
+          </select>
+        </div>
+        <div class="setting-group">
+          <label>Vote Duration (s)</label>
+          <input type="number" id="vote-duration" value="40" min="5" max="300">
+          <small class="hint">Seconds after voting starts before tallying all submissions</small>
+        </div>
+        <div class="setting-group">
+          <label>Auto-Repeat Cooldown (s) <span class="optional-label">(optional)</span></label>
+          <input type="number" id="auto-repeat" placeholder="Leave empty for manual only" min="20" max="3600">
+          <small class="hint">Seconds after voting ends before next vote phase starts</small>
+        </div>
+        <div class="setting-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="debug-mode">
+            Debug Mode
+          </label>
+          <small class="hint">Allows multiple submissions and votes from same user<br>(for testing or trustworthy small audiences)</small>
+        </div>
+        <button id="save-settings" class="btn btn-save">Save Settings</button>
+      </div>
+    </details>
+    <details class="submissions glass-panel">
+      <summary>Submissions <span id="sub-count">(0)</span></summary>
+      <ul id="submission-list">
+        <li class="no-submissions">No submissions yet</li>
+      </ul>
+    </details>
+    <details class="ai-context glass-panel" id="ai-context-section" style="display: none;">
+      <summary>Combined</summary>
+      <div class="ai-debug-content">
+        <div class="debug-meta">
+          <span id="ai-model"></span>
+          <span id="ai-timestamp"></span>
+        </div>
+        <div class="debug-section">
+          <div class="debug-label">System Prompt</div>
+          <pre id="ai-system-prompt"></pre>
+        </div>
+        <div class="debug-section">
+          <div class="debug-label">User Prompt (Context + Submissions)</div>
+          <pre id="ai-user-prompt"></pre>
+        </div>
+        <div class="debug-section">
+          <div class="debug-label">Response</div>
+          <pre id="ai-response" class="response"></pre>
+        </div>
+      </div>
+    </details>
+    <footer>
+      <span class="commands-hint"><code>!vote</code> <code>!tally</code> <code>> action</code> <code>+1 @name</code></span>
+    </footer>
+  </div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

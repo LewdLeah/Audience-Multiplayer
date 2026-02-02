@@ -1,0 +1,16 @@
+# Environment files
+.env
+.env.*
+*.env
+# API keys / secrets
+*secret*
+*credentials*
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+# OS
+.DS_Store
+Thumbs.db
+# Node
+node_modules/
