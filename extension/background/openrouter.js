@@ -137,9 +137,9 @@ export const recursiveMerge = async (config, context, submissions, lastAIOutput 
   const partyMemberName = config.partyMemberName || 'the party member';
   const systemPrompt = buildSystemPrompt(partyMemberName);
   // Calculate dynamic batch size based on context budget
-  // Estimate ~50 tokens per submission, aim for ~2000 tokens per batch
+  // Estimate ~50 tokens per submission, aim for ~16000 tokens per batch
   const tokensPerSubmission = 50;
-  const targetBatchTokens = 2000;
+  const targetBatchTokens = 16000;
   const batchSize = Math.max(3, Math.floor(targetBatchTokens / tokensPerSubmission));
   // If we can fit all in one batch, do it directly
   if (submissions.length <= batchSize) {
