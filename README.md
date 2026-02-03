@@ -19,6 +19,8 @@ Audience Multiplayer is a browser extension that connects your **Twitch** and/or
 
 This creates an interactive multiplayer experience where your audience actively participates in your story!
 
+https://github.com/user-attachments/assets/a7afd3cf-5361-4064-b326-361e9db0de5d
+
 ---
 
 ## Requirements
