@@ -29,4 +29,4 @@ When you provide your own API key, chat submissions (usernames and action text) 
 
 ## Questions
 
-If you have questions, open an issue on the [GitHub repository](https://github.com/LewdLeah/Audience-Multiplayer).
+If you have questions, open an [issue](https://github.com/LewdLeah/Audience-Multiplayer).
