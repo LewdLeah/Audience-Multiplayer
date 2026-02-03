@@ -20,10 +20,12 @@ All data is stored **locally on your device** using Chrome's storage API:
 ## Third-Party Services
 
 ### Without an OpenRouter API Key
+
 No data leaves your device. Votes are tallied locally and the winning action is submitted.
 
 ### With an OpenRouter API Key
-When you provide your own API key, chat submissions (usernames and action text) are sent to [OpenRouter](https://openrouter.ai) to combine multiple suggestions into a single action. This uses **your API key** and **your OpenRouter account** — I never see this data. Review [OpenRouter's Privacy Policy](https://openrouter.ai/privacy) for how they handle requests.
+
+When you provide your own API key, chat submissions (usernames and action text) are sent to [OpenRouter](https://openrouter.ai) to combine multiple suggestions into a single action. This uses **your API key** and **your OpenRouter account.** I never see this data. Review [OpenRouter's Privacy Policy](https://openrouter.ai/privacy) for how they handle requests.
 
 ## Questions
 
