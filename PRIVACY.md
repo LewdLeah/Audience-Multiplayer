@@ -4,7 +4,7 @@
 
 ## What This Extension Accesses
 
-- **Twitch/YouTube public chat messages** — Read to detect votes and action submissions
+- **Public livestream chat messages** — Read to detect votes and action submissions
 - **Twitch authentication** — Used to connect to your chat channel
 - **AI Dungeon page content** — Read to detect available actions
 
