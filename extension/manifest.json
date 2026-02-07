@@ -6,7 +6,6 @@
   "description": "Livestream chat integration for AI Dungeon multiplayer adventures",
   "permissions": [
     "storage",
-    "activeTab",
     "identity"
   ],
   "host_permissions": [
