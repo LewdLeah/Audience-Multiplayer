@@ -2,7 +2,7 @@
 // Runs on AI Dungeon pages to extract Firebase token and shortId
 // Content scripts run in an isolated context and cannot use ES module imports
 // These constants are duplicated from background/constants.js - keep in sync
-const TOKEN_REFRESH_INTERVAL_MS = 45 * 60 * 1000;
+const TOKEN_REFRESH_INTERVAL_MS = 10 * 60 * 1000;
 const URL_POLL_INTERVAL_MS = 1000;
 const FIREBASE_INIT_DELAY_MS = 3000;
 const TOKEN_EXTRACTION_TIMEOUT_MS = 10000;
