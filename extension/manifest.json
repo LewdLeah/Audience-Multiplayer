@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Audience Multiplayer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWPgWABvncAu+Hc5ARDPsBauB0lD6vdzhJj+/MaYez1Eyc2sODR2KisNchYYQjB78IzI6R8plp5uORYtdmw3sug+qRsfMHQb0f45NzthPw8ptEh1f9bhI2YRaUKUshEXc0HxpRyye46mF3ueZzjlQeQ9Irm6Dpm6E3WKI9EsJabba3e3W05zP1VbCo/vdiO7fFPVKQwx+JxH1+FN5CAa+1wQbTYkYGXbHfJhI+WHZ175wf4q61pdpbk2SdHNieUczYWTO4Zf5KgEVSmzhiG73TFLu7UwtMKFdzPevIUIXHzLyk2omUedWDkmGTbiMm5mZ5cUGLzGuUAGXUkzvKqRXQIDAQAB",
   "description": "Livestream chat integration for AI Dungeon multiplayer adventures",
   "permissions": [

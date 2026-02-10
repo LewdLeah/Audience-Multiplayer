@@ -37,6 +37,10 @@ Before you begin, make sure you have:
 
 ## Installation Guide
 
+### Step 0: Simple Install
+
+You can skip steps 1-3 by using the Chrome Web Store version [here](https://chromewebstore.google.com/detail/bdhkcdojejgmbpfcekdcimjpobinmpcp)!
+
 ### Step 1: Download the Extension
 
 1. Click the green **Code** button on this GitHub page
@@ -249,10 +253,11 @@ Example: Setting Auto-Repeat to 60 means a new vote starts 60 seconds after each
 
 ## Useful Links
 
+- [Chrome Web Store Link](https://chromewebstore.google.com/detail/bdhkcdojejgmbpfcekdcimjpobinmpcp) - Simple install version
 - [AI Dungeon](https://aidungeon.com/) - The game this extension integrates with
 - [AI Dungeon Discord](https://discord.gg/MXNqpSbuZT) - Community discussion
 
 ---
 
 <p align="center"><i>Have fun playing with your audience~</i></p>
-<p align="center"><b>Audience Multiplayer v1.0.0</b> · Made with love by <a href="https://play.aidungeon.com/profile/LewdLeah">LewdLeah</a> ❤️</p>
+<p align="center"><b>Audience Multiplayer v1.0.1</b> · Made with love by <a href="https://play.aidungeon.com/profile/LewdLeah">LewdLeah</a> ❤️</p>
